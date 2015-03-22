@@ -1,7 +1,29 @@
 body {
     background-color: #d0e4ff;
 }
+.all{
+	display: inline-block;
+	width: 100%
+}
+.holes {
+	display: inline;
+	vertical-align: top;
+	width: auto;
+	float: left;	
+}
+
 .score {
 	color: #00008A;
 	font-size: 32;
+}
+.scoreDiv {
+	display: inline;
+	vertical-align: top;
+	width: auto;
+	float: left;
+}
+
+img {
+	width: 100px;
+	height: 100px;
 }

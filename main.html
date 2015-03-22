@@ -5,23 +5,50 @@
 		<script src="whack.js"></script>
 	</head>
 	<body>
-		<table style="width:100%">
-			<tr>
-				<td class="whack" id="w0"></td>
-				<td class="whack" id="w1"></td>
-				<td class="whack" id="w2"></td>
-			</tr>
-			<tr>
-				<td class="whack" id="w3"></td>
-				<td class="whack" id="w4"></td>
-				<td class="whack" id="w5"></td>
-			</tr>
-			<tr>
-				<td class="whack" id="w6"></td>
-				<td class="whack" id="w7"></td>
-				<td class="whack" id="w8"></td>
-			</tr>	
-		</table>
-		<span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
+		<div id="all">
+			<div id="holes">
+				<table>
+					<tr>
+						<td>
+							<img src="base.png" class="whack" id="w0" onclick="hitFunction()"/>
+						</td>	
+						<td>
+							<img src="base.png" class="whack" id="w1"/>
+						</td>	
+						<td>
+							<img src="base.png" class="whack" id="w2"/>
+						</td>	
+					</tr>
+					<tr>
+						<td>
+							<img src="base.png" class="whack" id="w3"/>
+						</td>	
+						<td>
+							<img src="base.png" class="whack" id="w4"/>
+						</td>	
+						<td>
+							<img src="base.png" class="whack" id="w5"/>
+						</td>	
+					</tr>
+					<tr>
+						<td>
+							<img src="base.png" class="whack" id="w6"/>
+						</td>	
+						<td>
+							<img src="base.png" class="whack" id="w7"/>
+						</td>	
+						<td>
+							<img src="base.png" class="whack" id="w8"/>
+						</td>	
+					</tr>	
+				</table>
+			</div>
+			<div id="scoreDiv">
+				<span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
+			</div>
+		</div>
+		<div>
+			<button onclick="startFunction()"> START </button>
+		<div>	
 	</body>
 </html>	
