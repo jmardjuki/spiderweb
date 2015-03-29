@@ -3,20 +3,24 @@
 // Description  : Script for whack a mole game
 //======================================================================
 
+//== UNFINISHED ==
+
 //KNOWN BUGS: 
 // 1. After hit, the mole won't re-spawn
 //		Probably will use .on()
 // 2. No automatic destroy mole
 
+"use strict"
+
 // Global Variables
 var score = 0;
 var arrMoles = [];
+var start = false;
 
 function hitFunction(id, content)
 {
 	score++;
 	var str = "<span class=\"score\" id=\"scoreCalc\">" + score + "</span>";
-	console.log(id);	
 	var full = "<img src=\"base.png\" class=\"whack\" id=\"" + id + "\"/>"
 	$(content).replaceWith(full);
 	$("#scoreCalc").replaceWith(str);
@@ -27,44 +31,27 @@ function spawnMole()
 {
 	var num = (Math.floor(Math.random() * 10)%9);
 	var ran = "w" + num;
-	which = "#" + ran;
-	var string = "<img src=\"char2.png\" class=\"whack\" id=\""+which+"\" onclick=\"hitFunction(this.getAttribute('id'), this)\"/>"
-	$(which).replaceWith(string);
-	arrMoles.push(num);
+	var which = "#" + ran;
+	$(which).attr("src","char2.png");
+	$(which).attr("onclick","hitFunction(this.getAttribute('id'), this)");
+	arrMoles.push(which);
 }
 
 function destroyMole()
 {
-	/* 
-	for ( var i = 0; i < arrMoles.length; i++)
-	{
-		console.log( i + arrMoles[i]);	
-	}
-	
-	var size = arrMoles.length;
-	var object = 0;
-	while ( object == 0 )
-	{
-		var ranIndex = (Math.floor(Math.random() * 10)%size)
-		object = arrMoles.slice(ranIndex);
-	}
-	arrMoles[ranIndex] = 0;
-	which = "#w" + object;
-	//console.log(which);
-	var string = "<img src=\"base.png\" class=\"whack\" id=\"" + which + "\"/>"
-	$(which).replaceWith(string);
-	TOOK CPU TOO MUCH, DEADLOCK?
-	*/
+	var destroy = arrMoles.pop();
+	$(destroy).attr("src","base.png");
+	$(destroy).attr('onclick','').unbind('click');	
 
 }
 function startFunction()
 {
 
-
+	$('#music').trigger("play");
+	start = true;
+	if ( start == true)
+	{
+		window.setInterval(function(){spawnMole()}, 750);
+		window.setInterval(function(){destroyMole()}, 1500);
+	}
 }
-
-
-
-$(document).ready(function(){
-	setInterval(function(){spawnMole()}, 750);
-});
