@@ -15,15 +15,24 @@
 // Global Variables
 var score = 0;
 var arrMoles = [];
-var start = false;
+
+var spawnI;
+var destroyI;
+var clearI;
+
+
+function updateScore()
+{
+	var str = "<span class=\"score\" id=\"scoreCalc\">" + score + "</span>";
+	$("#scoreCalc").replaceWith(str);	
+}
 
 function hitFunction(id, content)
 {
 	score++;
-	var str = "<span class=\"score\" id=\"scoreCalc\">" + score + "</span>";
 	var full = "<img src=\"base.png\" class=\"whack\" id=\"" + id + "\"/>"
 	$(content).replaceWith(full);
-	$("#scoreCalc").replaceWith(str);
+	updateScore();
 
 }
 
@@ -44,14 +53,34 @@ function destroyMole()
 	$(destroy).attr('onclick','').unbind('click');	
 
 }
+function isPlaying() {
+    var player = document.getElementById("music");
+    return !player.paused && !player.ended && 0 < player.currentTime;
+}
+
+function clearStatus(spawn, destroy)
+{
+	console.log("check in");
+	if ( !isPlaying() )
+	{
+		clearInterval(spawnI);
+		clearInterval(destroyI);
+		while ( arrMoles.length > 0 )
+		{
+			destroyMole();
+		}
+		console.log("trying");
+		clearInterval(clearI);
+		document.getElementById("startBt").disabled=false;
+	}
+}
 function startFunction()
 {
-
+	score = 0;
+	updateScore();
+	document.getElementById("startBt").disabled=true;
 	$('#music').trigger("play");
-	start = true;
-	if ( start == true)
-	{
-		window.setInterval(function(){spawnMole()}, 750);
-		window.setInterval(function(){destroyMole()}, 1500);
-	}
+	spawnI = window.setInterval(function(){spawnMole()}, 550);
+	destroyI = window.setInterval(function(){destroyMole()}, 1500);
+	clearI = window.setInterval(function(){clearStatus()}, 100)
 }
