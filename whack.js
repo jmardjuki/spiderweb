@@ -5,10 +5,7 @@
 
 //== UNFINISHED ==
 
-//KNOWN BUGS: 
-// 1. After hit, the mole won't re-spawn
-//		Probably will use .on()
-// 2. No automatic destroy mole
+//KNOWN BUGS:
 
 "use strict"
 
@@ -20,6 +17,11 @@ var spawnI;
 var destroyI;
 var clearI;
 
+function gameHasEnded()
+{
+	var string = "Game has ended. \nYour final score is " + score;
+	window.alert(string);
+}
 
 function updateScore()
 {
@@ -27,11 +29,23 @@ function updateScore()
 	$("#scoreCalc").replaceWith(str);	
 }
 
+function removeElement(id)
+{
+	for (var i = 0; i < arrMoles.length; i++)
+	{
+		if ( arrMoles[i] == id)
+		{
+			array.splice(i,1);
+		}
+	}
+}
+
 function hitFunction(id, content)
 {
 	score++;
 	var full = "<img src=\"base.png\" class=\"whack\" id=\"" + id + "\"/>"
 	$(content).replaceWith(full);
+	removeElement(id);
 	updateScore();
 
 }
@@ -43,7 +57,7 @@ function spawnMole()
 	var which = "#" + ran;
 	$(which).attr("src","char2.png");
 	$(which).attr("onclick","hitFunction(this.getAttribute('id'), this)");
-	arrMoles.push(which);
+	arrMoles[arrMoles.length] = which;
 }
 
 function destroyMole()
@@ -60,7 +74,6 @@ function isPlaying() {
 
 function clearStatus(spawn, destroy)
 {
-	console.log("check in");
 	if ( !isPlaying() )
 	{
 		clearInterval(spawnI);
@@ -69,9 +82,9 @@ function clearStatus(spawn, destroy)
 		{
 			destroyMole();
 		}
-		console.log("trying");
 		clearInterval(clearI);
 		document.getElementById("startBt").disabled=false;
+		gameHasEnded();
 	}
 }
 function startFunction()
@@ -81,6 +94,6 @@ function startFunction()
 	document.getElementById("startBt").disabled=true;
 	$('#music').trigger("play");
 	spawnI = window.setInterval(function(){spawnMole()}, 550);
-	destroyI = window.setInterval(function(){destroyMole()}, 1500);
+	destroyI = window.setInterval(function(){destroyMole()}, 1000);
 	clearI = window.setInterval(function(){clearStatus()}, 100)
 }
