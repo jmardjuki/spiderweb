@@ -6,8 +6,10 @@ A whack a mole game created using HTML, CSS, and JavaScript
 
 Known issue: (28 March 2015)
 
-- Destroy not random enough due to usage of stack
+- Destroy by user does not remove the id from the stack
 
 To-Do:
 - Improve image
-- Timer based on the song | 5 min too long, tema too short, up-to var1?
+- Cut the song on different bar/ change the song
+- Fix major bugs
+- Improve CSS
