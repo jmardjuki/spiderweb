@@ -33,13 +33,10 @@
 #blank_div{
     height: 1%;
 }
+html, body {
+    height: 100%;
+}
 img {
     width: 100px;
     height: 100px;
-}
-footer {
-    position: fixed;
-    height: 50px;
-    bottom: 0;
-    width: 100%;
 }

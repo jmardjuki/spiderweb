@@ -15,7 +15,7 @@
     <audio id="music" type="audio/mpeg" controls="controls" hidden>   
       <source src="mozart.mp3" />  
     </audio>       
-    <div class="container-fluid" id="main-container">
+    <div class="container" id="main-container">
       <div class="text-center" id="theTitle">
         <h2>whackAmole</h2>
       </div>
@@ -64,11 +64,14 @@
           <button id="startBt" onclick="startFunction()"> START </button>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <p class="text-muted">Copyright &copy; 2015-2016 JANET MARDJUKI All rights reserved<p>
-        </div>
-      </footer>  
+      <div id="push">
+      	<!-- Empty to push the footer -->
+      </div>
     </div>
+    <div class="navbar navbar-fixed-bottom" id="footer">
+			<div class="container">
+	 			<p class="text-muted">Copyright &copy; 2015-2016 JANET MARDJUKI All rights reserved<p>
+      </div>
+  	</div>  
   </body>
 </html> 
