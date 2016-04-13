@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css"></style>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="whack.js"></script>
-	</head>
-	<body>
-		<audio id="music" type="audio/mpeg" controls="controls" hidden>   
-			<source src="mozart.mp3" />  
-		</audio> 		
-		<div id="all">
-			<div id="holes">
-				<table id="mole">
-					<tr>
-						<td>
-							<img src="base.png" class="whack" id="w0"/>
-						</td>	
-						<td>
-							<img src="base.png" class="whack" id="w1"/>
-						</td>	
-						<td>
-							<img src="base.png" class="whack" id="w2"/>
-						</td>	
-					</tr>
-					<tr>
-						<td>
-							<img src="base.png" class="whack" id="w3"/>
-						</td>	
-						<td>
-							<img src="base.png" class="whack" id="w4"/>
-						</td>	
-						<td>
-							<img src="base.png" class="whack" id="w5"/>
-						</td>	
-					</tr>
-					<tr>
-						<td>
-							<img src="base.png" class="whack" id="w6"/>
-						</td>	
-						<td>
-							<img src="base.png" class="whack" id="w7"/>
-						</td>	
-						<td>
-							<img src="base.png" class="whack" id="w8"/>
-						</td>	
-					</tr>	
-				</table>
-			</div>
-			<div id="scoreDiv">
-				<span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
-			</div>
-		</div>
-		<div id="startDiv">
-			<button id="startBt" onclick="startFunction()"> START </button>
-		</div>	
-	</body>
-</html>	
+  <head>
+  	<title>whackAmole</title>
+  	<meta charset="utf-8">
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"></style>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="whack.js"></script>
+  </head>
+  <body>
+    <audio id="music" type="audio/mpeg" controls="controls" hidden>   
+      <source src="mozart.mp3" />  
+    </audio>       
+    <div class="container-fluid" id="main-container">
+      <div class="text-center" id="theTitle">
+        <h2>whackAmole</h2>
+      </div>
+      <div id="holes">
+        <table id="mole">
+          <tr>
+            <td>
+              <img src="base.png" class="whack" id="w0"/>
+            </td> 
+            <td>
+              <img src="base.png" class="whack" id="w1"/>
+            </td> 
+            <td>
+              <img src="base.png" class="whack" id="w2"/>
+            </td> 
+          </tr>
+          <tr>
+            <td>
+              <img src="base.png" class="whack" id="w3"/>
+            </td> 
+            <td>
+              <img src="base.png" class="whack" id="w4"/>
+            </td> 
+            <td>
+              <img src="base.png" class="whack" id="w5"/>
+            </td> 
+          </tr>
+          <tr>
+            <td>
+              <img src="base.png" class="whack" id="w6"/>
+            </td> 
+            <td>
+              <img src="base.png" class="whack" id="w7"/>
+            </td> 
+            <td>
+              <img src="base.png" class="whack" id="w8"/>
+            </td> 
+          </tr> 
+        </table>
+      </div>
+      <div id="etc">
+        <div id="scoreDiv">
+          <span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
+        </div>
+        <div id="startDiv">
+          <button id="startBt" onclick="startFunction()"> START </button>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <p class="text-muted">Copyright &copy; 2015-2016 JANET MARDJUKI All rights reserved<p>
+        </div>
+      </footer>  
+    </div>
+  </body>
+</html> 

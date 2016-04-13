@@ -1,25 +1,45 @@
-body {
-    background-color: #d0e4ff;
+#main-container {
+    background-color: white;
+    height: auto;
 }
 
 #holes {
-	vertical-align: top;
-	width: auto;
-	float: left;	
+    vertical-align: top;
+    width: auto;
+    float: center;
+    display: flex;  
+}
+#mole {
+    margin: 0 auto; 
 }
 
 #score {
-	color: #00008A;
-	font-size: 32;
+    color: #00008A;
+    font-size: 32;
+    margin: 0 auto; 
 }
-#scoreDiv {
-	display: inline-block;
-	vertical-align: top;
-	width: auto;
+#etc {
+    vertical-align: top;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #startDiv{
+    margin: 0 auto; 
+}
+#blank_div{
+    height: 1%;
 }
 img {
-	width: 100px;
-	height: 100px;
+    width: 100px;
+    height: 100px;
+}
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
 }
