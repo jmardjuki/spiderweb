@@ -7,16 +7,16 @@
     vertical-align: top;
     width: auto;
     float: center;
-    display: flex;  
+    display: flex;
 }
 #mole {
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 #score {
     color: #00008A;
     font-size: 32;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 #etc {
     vertical-align: top;
@@ -28,7 +28,7 @@
     margin-right: auto;
 }
 #startDiv{
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 #blank_div{
     height: 1%;

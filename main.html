@@ -2,76 +2,82 @@
 <html>
   <head>
   	<title>whackAmole</title>
-  	<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Whack A Cat | Simple game made using JavaScript">
     <!-- CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css"></style>
-    <!-- JS -->
+  </head>
+  <body>
+    <audio id="music" type="audio/mpeg" controls="controls" hidden>
+      <source src="mozart.mp3" />
+    </audio>
+		<div id="wrapper">
+	    <div class="container" id="main-container">
+				<div id="back_button">
+					<a href=""><- Back to home </a>
+				</div>
+	      <div class="text-center" id="theTitle">
+	        <h2>whackAmole</h2>
+	      </div>
+	      <div id="holes">
+	        <table id="mole">
+	          <tr>
+	            <td>
+	              <img src="base.png" class="whack" id="w0"/>
+	            </td>
+	            <td>
+	              <img src="base.png" class="whack" id="w1"/>
+	            </td>
+	            <td>
+	              <img src="base.png" class="whack" id="w2"/>
+	            </td>
+	          </tr>
+	          <tr>
+	            <td>
+	              <img src="base.png" class="whack" id="w3"/>
+	            </td>
+	            <td>
+	              <img src="base.png" class="whack" id="w4"/>
+	            </td>
+	            <td>
+	              <img src="base.png" class="whack" id="w5"/>
+	            </td>
+	          </tr>
+	          <tr>
+	            <td>
+	              <img src="base.png" class="whack" id="w6"/>
+	            </td>
+	            <td>
+	              <img src="base.png" class="whack" id="w7"/>
+	            </td>
+	            <td>
+	              <img src="base.png" class="whack" id="w8"/>
+	            </td>
+	          </tr>
+	        </table>
+	      </div>
+	      <div id="etc">
+	        <div id="scoreDiv">
+	          <span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
+	        </div>
+	        <div id="startDiv">
+	          <button id="startBt" onclick="startFunction()"> START </button>
+	        </div>
+	      </div>
+	    </div>
+		</div>
+    <div class="navbar navbar-fixed-bottom" id="footer">
+			<div class="container">
+				<a href="">How to Play</a>
+				<a href="">About</a>
+				<a href="">Credits</a>
+	 			<p class="text-muted">Copyright &copy; 2015-2016 JANET MARDJUKI All rights reserved<p>
+      </div>
+  	</div>
+		<!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="whack.js"></script>
-  </head>
-  <body>
-    <audio id="music" type="audio/mpeg" controls="controls" hidden>   
-      <source src="mozart.mp3" />  
-    </audio>       
-    <div class="container" id="main-container">
-      <div class="text-center" id="theTitle">
-        <h2>whackAmole</h2>
-      </div>
-      <div id="holes">
-        <table id="mole">
-          <tr>
-            <td>
-              <img src="base.png" class="whack" id="w0"/>
-            </td> 
-            <td>
-              <img src="base.png" class="whack" id="w1"/>
-            </td> 
-            <td>
-              <img src="base.png" class="whack" id="w2"/>
-            </td> 
-          </tr>
-          <tr>
-            <td>
-              <img src="base.png" class="whack" id="w3"/>
-            </td> 
-            <td>
-              <img src="base.png" class="whack" id="w4"/>
-            </td> 
-            <td>
-              <img src="base.png" class="whack" id="w5"/>
-            </td> 
-          </tr>
-          <tr>
-            <td>
-              <img src="base.png" class="whack" id="w6"/>
-            </td> 
-            <td>
-              <img src="base.png" class="whack" id="w7"/>
-            </td> 
-            <td>
-              <img src="base.png" class="whack" id="w8"/>
-            </td> 
-          </tr> 
-        </table>
-      </div>
-      <div id="etc">
-        <div id="scoreDiv">
-          <span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
-        </div>
-        <div id="startDiv">
-          <button id="startBt" onclick="startFunction()"> START </button>
-        </div>
-      </div>
-      <div id="push">
-      	<!-- Empty to push the footer -->
-      </div>
-    </div>
-    <div class="navbar navbar-fixed-bottom" id="footer">
-			<div class="container">
-	 			<p class="text-muted">Copyright &copy; 2015-2016 JANET MARDJUKI All rights reserved<p>
-      </div>
-  	</div>  
   </body>
-</html> 
+</html>

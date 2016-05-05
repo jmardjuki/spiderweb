@@ -26,7 +26,7 @@ function gameHasEnded()
 function updateScore()
 {
 	var str = "<span class=\"score\" id=\"scoreCalc\">" + score + "</span>";
-	$("#scoreCalc").replaceWith(str);	
+	$("#scoreCalc").replaceWith(str);
 }
 
 function removeElement(id)
@@ -55,7 +55,7 @@ function spawnMole()
 	var num = (Math.floor(Math.random() * 10)%9);
 	var ran = "w" + num;
 	var which = "#" + ran;
-	$(which).attr("src","char2.png");
+	$(which).attr({src:"cat.gif", loop:'infinite'});
 	$(which).attr("onclick","hitFunction(this.getAttribute('id'), this)");
 	arrMoles[arrMoles.length] = which;
 }
@@ -64,7 +64,7 @@ function destroyMole()
 {
 	var destroy = arrMoles.pop();
 	$(destroy).attr("src","base.png");
-	$(destroy).attr('onclick','').unbind('click');	
+	$(destroy).attr('onclick','').unbind('click');
 
 }
 function isPlaying() {
