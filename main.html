@@ -18,7 +18,7 @@
 					<a href=""><- Back to home </a>
 				</div>
 	      <div class="text-center" id="theTitle">
-	        <h2>whackAmole</h2>
+	        <h2>whackACat</h2>
 	      </div>
 	      <div id="holes">
 	        <table id="mole">
@@ -62,10 +62,17 @@
 	          <span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
 	        </div>
 	        <div id="startDiv">
-	          <button id="startBt" onclick="startFunction()"> START </button>
+            <svg width="160" height="160" onclick="startFunction()">
+               <circle cx="25" cy="57" r="20" stroke="#ff9999" stroke-width="4" fill="#ffcccc" />
+               <circle cx="80" cy="30" r="24" stroke="#ff9999" stroke-width="4" fill="#ffcccc" />
+               <circle cx="135" cy="57" r="20" stroke="#ff9999" stroke-width="4" fill="#ffcccc" />
+               <circle cx="80" cy="100" r="40" stroke="#ff9999" stroke-width="4" fill="#ffcccc" />
+               <text x="54" y="105" fill="#ff9191">START!</text>
+               Sorry, your browser does not support inline SVG.
+            </svg>
 	        </div>
 	      </div>
-				<div class="navbar navbar-fixed-bottom navbar-inverse my-footer">
+				<div class="navbar navbar-inverse">
 					<div class="container-fluid">
 						<div class="row">
 							<p class="navbar-text">INSTRUCTIONS</p>
@@ -76,7 +83,7 @@
 		  	</div>
 			</div>
 		</div>
-		<!-- JS -->
+		<!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="whack.js"></script>
