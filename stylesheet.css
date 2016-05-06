@@ -1,8 +1,3 @@
-#main-container {
-    background-color: white;
-    height: auto;
-}
-
 #holes {
     vertical-align: top;
     width: auto;
@@ -36,6 +31,10 @@
 html, body {
     height: 100%;
 }
+html {
+    background-color: gray;
+}
+
 img {
     width: 100px;
     height: 100px;
