@@ -31,10 +31,8 @@ function updateScore()
 
 function removeElement(id)
 {
-	for (var i = 0; i < arrMoles.length; i++)
-	{
-		if ( arrMoles[i] == id)
-		{
+	for (var i = 0; i < arrMoles.length; i++) {
+	if ( arrMoles[i] == id) {
 			array.splice(i,1);
 		}
 	}
@@ -74,12 +72,10 @@ function isPlaying() {
 
 function clearStatus(spawn, destroy)
 {
-	if ( !isPlaying() )
-	{
+	if (!isPlaying()) {
 		clearInterval(spawnI);
 		clearInterval(destroyI);
-		while ( arrMoles.length > 0 )
-		{
+		while (arrMoles.length > 0) {
 			destroyMole();
 		}
 		clearInterval(clearI);

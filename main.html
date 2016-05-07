@@ -62,7 +62,7 @@
 	          <span class="score">Score: </span><span class="score" id="scoreCalc">0</span>
 	        </div>
 	        <div id="startDiv">
-            <svg width="160" height="160" onclick="startFunction()">
+            <svg id="daPaw" width="160" height="160" onclick="startFunction()">
                <circle cx="25" cy="57" r="20" stroke="#ff9999" stroke-width="4" fill="#ffcccc" />
                <circle cx="80" cy="30" r="24" stroke="#ff9999" stroke-width="4" fill="#ffcccc" />
                <circle cx="135" cy="57" r="20" stroke="#ff9999" stroke-width="4" fill="#ffcccc" />
@@ -70,8 +70,11 @@
                <text x="54" y="105" fill="#ff9191">START!</text>
                Sorry, your browser does not support inline SVG.
             </svg>
+            <br/>
+	          <button id="startBt" onclick="startFunction()"> START </button>
 	        </div>
 	      </div>
+        <br />
 				<div class="navbar navbar-inverse">
 					<div class="container-fluid">
 						<div class="row">
