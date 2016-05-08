@@ -3,8 +3,6 @@
 // Description  : Script for whack a mole game
 //======================================================================
 
-//== UNFINISHED ==
-
 //KNOWN BUGS:
 
 "use strict"
@@ -41,7 +39,7 @@ function removeElement(id)
 function hitFunction(id, content)
 {
 	score++;
-	var full = "<img src=\"base.png\" class=\"whack\" id=\"" + id + "\"/>"
+	var full = "<img src=\"media/images/base.png\" class=\"whack\" id=\"" + id + "\"/>"
 	$(content).replaceWith(full);
 	removeElement(id);
 	updateScore();
@@ -53,7 +51,7 @@ function spawnMole()
 	var num = (Math.floor(Math.random() * 10)%9);
 	var ran = "w" + num;
 	var which = "#" + ran;
-	$(which).attr({src:"cat.gif", loop:'infinite'});
+	$(which).attr({src:"media/images/cat.gif", loop:'infinite'});
 	$(which).attr("onclick","hitFunction(this.getAttribute('id'), this)");
 	arrMoles[arrMoles.length] = which;
 }
@@ -61,7 +59,7 @@ function spawnMole()
 function destroyMole()
 {
 	var destroy = arrMoles.pop();
-	$(destroy).attr("src","base.png");
+	$(destroy).attr("src","media/images/base.png");
 	$(destroy).attr('onclick','').unbind('click');
 
 }
@@ -79,7 +77,7 @@ function clearStatus(spawn, destroy)
 			destroyMole();
 		}
 		clearInterval(clearI);
-		document.getElementById("startBt").disabled=false;
+		$('#daPaw').fadeIn();
 		gameHasEnded();
 	}
 }
@@ -87,7 +85,7 @@ function startFunction()
 {
 	score = 0;
 	updateScore();
-	document.getElementById("startBt").disabled=true;
+	$('#daPaw').fadeOut();
 	$('#music').trigger("play");
 	spawnI = window.setInterval(function(){spawnMole()}, 550);
 	destroyI = window.setInterval(function(){destroyMole()}, 1000);
