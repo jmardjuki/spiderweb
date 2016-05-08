@@ -91,3 +91,8 @@ function startFunction()
 	destroyI = window.setInterval(function(){destroyMole()}, 1000);
 	clearI = window.setInterval(function(){clearStatus()}, 100)
 }
+
+$(document).ready(function() {
+    $(".inline").colorbox({inline:true, width:"50%"});
+		$.colorbox({inline:true, href:"#instruction1", width:"50%"});
+});

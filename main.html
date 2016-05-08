@@ -6,14 +6,13 @@
     <meta name="description" content="Whack A Cat | Simple game made using JavaScript">
     <!-- CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://www.jacklmoore.com/colorbox/example1/colorbox.css" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css"></style>
   </head>
   <body>
     <audio id="music" type="audio/mpeg" controls="controls" hidden>
       <source src="media/audio/mozart.mp3" />
     </audio>
-    <!-- ColourBoxes -->
-
 		<div id="wrapper">
 	    <div class="container" id="main-container">
 				<div id="back_button">
@@ -80,7 +79,7 @@
 				<footer class="footer">
 					<div class="container-fluid">
 						<div class="row">
-							<p class="navbar-text">INSTRUCTIONS</p>
+							<p class="navbar-text"><a class="inline" href="#instruction1">INSTRUCTIONS</a></p>
 							<p class="navbar-text">ABOUT</p>
 						</div>
 			 			<p class="text-muted">Copyright &copy; 2015-2016 JANET MARDJUKI All rights reserved<p>
@@ -88,10 +87,21 @@
 		  	</div>
 			</div>
 		</div>
+    <!-- ColorBoxes -->
+    <!-- Instruction for first time user -->
+    <div style='display:none'>
+      <div id='instruction1' style='padding:10px; background:#fff;'>
+        First time visiting this page?
+        <ul>
+          <li>-> Yes, let me take a look at the instructions</li>
+          <li>-> Nope, let me get started</li>
+        </ul>
+      </div>
+    </div>
 		<!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://www.jacklmoore.com/colorbox/jquery.colorbox.js"></script>
     <script src="js/whack.js"></script>
-    <script src"https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.3/i18n/jquery.colorbox-ar.js"></script>
   </body>
 </html>
