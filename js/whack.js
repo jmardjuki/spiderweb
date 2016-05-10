@@ -77,7 +77,7 @@ function clearStatus(spawn, destroy)
 			destroyMole();
 		}
 		clearInterval(clearI);
-		$('#daPaw').fadeIn();
+		$('#daPaw').fadeIn(150);
 		gameHasEnded();
 	}
 }
@@ -85,7 +85,7 @@ function startFunction()
 {
 	score = 0;
 	updateScore();
-	$('#daPaw').fadeOut();
+	$('#daPaw').fadeOut(150);
 	$('#music').trigger("play");
 	spawnI = window.setInterval(function(){spawnMole()}, 550);
 	destroyI = window.setInterval(function(){destroyMole()}, 1000);
@@ -94,5 +94,5 @@ function startFunction()
 
 $(document).ready(function() {
     $(".inline").colorbox({inline:true, width:"50%"});
-		$.colorbox({inline:true, href:"#instruction1", width:"50%"});
+		$.colorbox({inline:true, href:"#instruction1", width:"50%", closeButton:false});
 });

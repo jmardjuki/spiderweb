@@ -95,10 +95,8 @@
       <div id='instruction1' style='padding:10px; background:#fff;'>
         <img src="media/images/cat.gif"/>
         <h3>Hello there! <br/> Is this your first time visiting this page?</h3>
-        <ul>
-          <li>Yes, let me learn more</li>
-          <li>Nope, just let me get started</li>
-        </ul>
+        <span class="_select"><a class="inline" href="#instruction2">Yes, let me learn more</a></span><br />
+        <span class="_select"><a onclick="parent.$.fn.colorbox.close()">Nope, just let me get started</a></span>
       </div>
       <div id='instruction2' style='padding:10px; background:#fff;'>
         <!-- Temporary instructions -->
@@ -106,22 +104,31 @@
         <h5><b>Goal of this game is to score as much as possible by hitting the 'moles'</b></h5>
         <ol>
           <li>Click the paw with the string "START!" to start the game.</li>
-          <li>Whack (click) the cat that appears on the 3x3 holes to gain scoren within the specified duration.</li>
+          <li>Whack (click) the cat that appears on the 3x3 holes to gain score within the specified duration.</li>
           <li>Duration here refers to the the background audio that currently playing, current audio piece is Mozart's Twelve Variations on "Ah vous dirai-je, Maman" aka Twinkle Twinkle.</li>
         </ol>
       </div>
       <!-- About -->
       <div id='about' style='padding:10px; background:#fff;'>
+        <img id="sample-whack" src="media/images/sampleWhack.png"/>
         <h3>Whack A Cat</h3>
         Whack A Cat is a simple game simillar to the famous arcade game "Whack A Mole. The main objective for this game is to score as much as possible within the game duration by hitting the 'moles'.
         <br/><br/>
         <h4>Built using:</h4>
         Game: HTML, JavaScript, jQuery<br/>
-        Design/Layout/Graphic: CSS, Twitter Bootstrap, Jack Moore's Colorbox
+        Design/Layout: CSS, Twitter Bootstrap, Jack Moore's Colorbox
         <br /><br/>
         <h4>Credits:</h4>
-        Concepts, design, and code: Janet Mardjuki.<br/>
+        Concepts, design, and code: Janet Mardjuki<br/>
         Special thanks to <a href="https://www.linkedin.com/in/anthony-mardjuki-0792a7118">Anthony Mardjuki</a> for digitizing the cat from my sketch into that beautiful gif
+        <br />
+        <br />
+        <a class="inline" href="#design">Read more about the design and concept</a>
+      </div>
+      <div id='design' style='padding:10px; background:#fff;'>
+        Concept and Design
+        At first, I started this project to practice on my JavaScript skills, but eventually it grew on me so much that I decided to keep improving it as I learned more.
+
       </div>
     </div>
 		<!-- JavaScript -->

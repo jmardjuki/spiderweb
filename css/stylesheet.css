@@ -45,3 +45,12 @@ img {
   bottom: 0;
   height: 10%;
 }
+
+#daPaw:hover {
+  cursor: hand;
+}
+
+#sample-whack {
+  width: 30%;
+  height: auto;
+}
