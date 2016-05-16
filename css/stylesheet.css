@@ -58,3 +58,21 @@ img {
   width: 45%;
   height: auto;
 }
+
+.link-wrapper {
+  display: block;
+}
+.design-next {
+  display: block;
+  text-align: right;
+  width: 50%;
+  position: relative;
+  float: left;
+}
+.design-back {
+  display: block;
+  text-align: left;
+  width: 50%;
+  position: relative;
+  float: left;
+}
